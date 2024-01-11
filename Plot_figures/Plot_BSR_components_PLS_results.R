@@ -1,3 +1,5 @@
+# nomenclature note = Script call 'BSR' values 'tvalue'
+
 #### library modules ####
 library("RMINC")
 library("lmerTest")
