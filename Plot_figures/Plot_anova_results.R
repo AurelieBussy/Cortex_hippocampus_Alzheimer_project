@@ -1,4 +1,3 @@
-#####
 ### run the other R scripts from repository to have necessary data loaded (Plot_correlation_PLS_results.R and Plot_BSR_components_PLS_results.R)
 
         # create empty matrices of size (52=number of components; 6=number of variables of interest from model)
@@ -83,7 +82,7 @@ rownames(fill_values)<-c(rowname_hipp,rowname_CIVET)
 colnames(color_values)<-c("AD-FAMHX","AD-HC","AD-MCI","MCI-FAMHX","MCI-HC","FAMHX-HC")
 rownames(color_values)<-c(rowname_hipp,rowname_CIVET)
 
-        # create plots (one plot per metric and per component --> not ideal visualization; see other versions below)
+        # create plots (one plot per metric and per component --> not ideal visualization; see other version below)
 myplots <- vector('list', ncol(matrix_diff_sorted)-1)
 
 i=1
@@ -121,6 +120,7 @@ matrix_diff_sorted_t<-as.data.frame(t(matrix_diff_sorted))[1:52,]
 matrix_upr_sorted_t<-as.data.frame(t(matrix_upr_sorted))[1:52,]
 matrix_lwr_sorted_t<-as.data.frame(t(matrix_lwr_sorted))[1:52,]
 pvalueTRUE_FALSE_sorted_t<-as.data.frame(t(pvalueTRUE_FALSE_sorted))[1:52,]
+
         # reorganise matrices 
 names_hipp<-paste(paste("HIPP_",paste(rep(1:ncomp_hipp, each=nmetric_hipp)),sep="C"),rep(metrics_hipp,ncomp_hipp),sep="_")
 names_CIVET<-paste(rep(metrics_CIVET,ncomp_CIVET),paste(rep(1:ncomp_CIVET, each=nmetric_CIVET)),sep="_CIVET_")
